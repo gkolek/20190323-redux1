@@ -4,8 +4,7 @@ import { createStore, combineReducers } from 'redux'
 
 // import {inc, dec, counterReducer} from './store/counter'
 import counterReducer, { inc, dec, } from './store/counter'
-import todosReducer, { add } from './store/todos'
-// import todosReducer, { del } from './store/todos'
+import todosReducer, { add, toggle, del } from './store/todos'
 
 import './index.css';
 import App from './App';
@@ -23,8 +22,9 @@ const store = createStore(
 
 window.inc = () => store.dispatch(inc())
 window.dec = () => store.dispatch(dec())
-window.add = (text) => store.dispatch(add(text))
-// window.del = () => store.dispatch(del())
+window.add = (newText) => store.dispatch(add(newText))
+window.toggle = (id) => store.dispatch(toggle(id))
+window.del = (id) => store.dispatch(del(id))
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
