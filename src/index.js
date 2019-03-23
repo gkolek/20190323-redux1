@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 
 // import {inc, dec, counterReducer} from './store/counter'
 import counterReducer, {inc, dec, } from './store/counter'
@@ -11,7 +11,9 @@ import App from './App';
 
 //Store
 const store = createStore(
-    counterReducer,
+    combineReducers({
+    counterReducer
+}),
     window.__REDUX_DEVTOOLS_EXTENSION__ &&
     window.__REDUX_DEVTOOLS_EXTENSION__()
 )
