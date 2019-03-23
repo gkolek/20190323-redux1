@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
 
-import {inc, dec, counterReducer} from './store/counter'
+// import {inc, dec, counterReducer} from './store/counter'
+import counterReducer, {inc, dec, } from './store/counter'
 
 import './index.css';
 import App from './App';

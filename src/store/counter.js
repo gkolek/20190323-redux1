@@ -11,7 +11,22 @@ export const dec = ()=>({
 })
 
 //Reducer
-export const counterReducer = (state = 0, action) => {
+
+// //Reducer
+// export const counterReducer = (state = 0, action) => {
+//     switch (action.type) {
+//         case INCREMENT_COUNTER:
+//             return state + 1
+//         case DECREMENT_COUNTER:
+//             return state - 2
+//         default:
+//             return state
+//     }
+// }
+
+
+//Reducer
+const counterReducer = (state = 0, action) => {
     switch (action.type) {
         case INCREMENT_COUNTER:
             return state + 1
@@ -21,3 +36,5 @@ export const counterReducer = (state = 0, action) => {
             return state
     }
 }
+
+export default counterReducer
