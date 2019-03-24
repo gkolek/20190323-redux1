@@ -4,7 +4,7 @@ import { inc, dec } from './store/counter'
 
 class Counter extends React.Component {
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (<div>
             <div>Current state: {this.props._value}</div>
             <button onClick={this.props._increment}>+</button>

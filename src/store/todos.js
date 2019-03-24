@@ -4,7 +4,7 @@ const ADD_TODO = 'ADD_TODO'
 const TOGGLE_TODO = 'TOGGLE_TODO'
 const DELETE_TODO = 'DELETE-TODO'
 
-export const add = (myText) => ({
+export const addTodo = (myText) => ({
     type: ADD_TODO,
     text: myText
 })
