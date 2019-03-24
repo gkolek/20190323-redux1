@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { inc, dec } from './store/counter'
 
 class Counter extends React.Component {
     render() {
+        console.log(this.props)
         return (<div>
             <div>Current state: {this.props._value}</div>
-            <button>+</button>
-            <button>-</button>
+            <button onClick={this.props._increment}>+</button>
+            <button onClick={this.props._decrement}>-</button>
         </div>)
 
     }
@@ -16,4 +18,9 @@ const mapStateToProps = state => ({
     _value: state.counter
 })
 
-export default connect(mapStateToProps)(Counter);
+const mapDispatchToProps = dispatch => ({
+    _increment: () => dispatch(inc()),
+    _decrement: () => dispatch(dec())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
