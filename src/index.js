@@ -28,6 +28,8 @@ window.toggle = (id) => store.dispatch(toggle(id))
 window.del = (id) => store.dispatch(del(id))
 
 
+window.add('Initial todo')
+
 ReactDOM.render(
     <Provider store={store}>
         <App />
