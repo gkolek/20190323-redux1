@@ -8,6 +8,7 @@ const TodoList = props => {
             alert('add todo "' + event.target.value + '" by pressing enter')
             const value = event.target.value
             props._handleTodoAdd(value)
+            event.target.value = ""
         }
     }
     console.log('TodoList props: ', props);
